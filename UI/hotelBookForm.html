@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hotel Reservation System - Login</title>
+	<script src="hotelBookFormScript.js"></script>
+	<link rel="stylesheet" type="text/css" href="style4.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body onload="setSessionVariables()">
+    <header>
+		<nav>
+			<ul>
+				<li>Welcome to Hotel Reservation System!</li>
+                <li><button type="submit" class="btn btn-primary" onclick="myDashboard()">Dashboard</button></li>
+				<li><button type="submit" class="btn btn-primary" onclick="myBookings()">My Bookings</button></li>
+			</ul>
+		</nav>
+	</header>
+<div class="container myform" >
+    <div class="container" style="text-align: center;">
+        <h1>Booking Form</h1>
+        <h2 id="hotelName"></h2>
+        <h3 id="FromDate"></h3>
+        <h3 id="ToDate"></h3>
+    </div>
+    <div class="container">
+        <form [formGroup]="form">
+            <div class="row">
+                <div class="col-sm-6">
+                    <label for="roomtype">Choose Room Count:</label>
+                </div>
+                <div class="col-sm-6">
+                    <input name="execRoom" type="text" id="deluxeRoomReadOnly" readonly>
+                    <input type="number" formControlName="deluxeRoom" class="deluxeRoom" id="deluxeRoom" placeholder="Count">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-6">
+                </div>
+                <div class="col-sm-6">
+                    <input name="execRoom" type="text" id="standardRoomReadOnly" readonly>
+                    <input type="number" formControlName="standardRoom" class="standardRoom" id="standardRoom" placeholder="Count">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-6">
+                </div>
+                <div class="col-sm-6">
+                    <input name="execRoom" type="text" id="suiteRoomReadOnly" readonly>
+                        <input type="number" formControlName="suiteRoom" class="suiteRoom" id="suiteRoom" placeholder="Count">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-6">
+                </div>
+                <div class="col-sm-6">
+                    <input name="execRoom" type="text" id="execRoomReadOnly" readonly>
+                        <input type="number" formControlName="execRoom" class="execRoom" id="execRoom" placeholder="Count">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-6">
+                    <label for="regtype">Amenities:</label>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="AirConditioning" id="checkBoxAC">
+                        <label class="form-check-label1" id="form-check-label1" for="checkBoxAC">
+                        AirConditioning
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="Food" id="checkBoxFood" >
+                        <label class="form-check-label2" id="form-check-label2" for="checkBoxFood">
+                        Food
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="Wifi" id="checkBoxWiFi" >
+                        <label class="form-check-label3" id="form-check-label3" for="checkBoxWiFi">
+                        WiFi
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="TV" id="checkBoxTV" >
+                        <label class="form-check-label4" id="form-check-label4" for="checkBoxTV">
+                        Television
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="ExtraBed" id="checkBoxExtraBed" >
+                        <label class="form-check-label5" id="form-check-label5" for="checkBoxExtraBed">
+                        Extra Bed
+                        </label>
+                    </div>
+                </div>
+            </div>
+          </form>
+          <div class="row">
+            <div class="col-sm-6">
+                <button type="submit" class="btn btn-primary" onclick="price()">CheckPrice</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6" id="priceId">
+                <p id="priceText"></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6" id="buttonSubmit">
+                
+            </div>
+        </div>
+      </div>
+</div>
+</body>
+</html>

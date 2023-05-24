@@ -1,0 +1,45 @@
+.row{
+    margin-bottom: 5px;
+}
+
+input[type=file]{
+    visibility: hidden;
+}
+
+label{
+    font-weight: bold;
+
+}
+
+.myform{
+    border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+div>button{
+    background-color:  #45a049;
+}
+
+header {
+	background-color: #333;
+	color: #fff;
+	padding: 20px;
+}
+
+nav ul {
+	list-style: none;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+nav li a {
+	color: #fff;
+	text-decoration: none;
+	font-size: 1.2rem;
+}
+
+#priceId{
+    text-align: right;
+}
